@@ -6,7 +6,8 @@ class Country(models.Model):
   
     cid=models.IntegerField(primary_key=True)
     cname=models.CharField(max_length=100)
-   
+    def __str__(self):
+        return self.cname
 class Capital(models.Model):
     caname=models.CharField(max_length=200)
  
